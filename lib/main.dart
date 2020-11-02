@@ -73,21 +73,24 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
                           children: <Widget>[
-                            Text("ID: "+snapshot.data[index]["id"].toString()),
+                            Text("Information", style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
+                            Text("Id: "+snapshot.data[index]["id"].toString()),
                             Text("Name: "+snapshot.data[index]["name"]),
                             Text("UserName: "+snapshot.data[index]["username"]),
                             Text("E-Mail: "+snapshot.data[index]["email"]),
                             SizedBox(height: 20.0),
+                            Text("Address", style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
                             Text("Street: "+snapshot.data[index]["address"]["street"]),
                             Text("Suite "+snapshot.data[index]["address"]["suite"]),
                             Text("City: "+snapshot.data[index]["address"]["city"]),
                             Text("ZipCode: "+snapshot.data[index]["address"]["zipcode"].toString()),
-                            SizedBox(height: 20.0),
                             Text("Geo: "+snapshot.data[index]["address"]["geo"].toString()),
                             SizedBox(height: 20.0),
+                            Text("Contact Information", style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
                             Text("Phone: "+snapshot.data[index]["phone"].toString()),
                             Text("Website: "+snapshot.data[index]["website"]),
                             SizedBox(height: 20.0),
+                            Text("Company Details", style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
                             Text("Company Name: "+snapshot.data[index]["company"]["name"]),
                             Text("Company Phrase: "+snapshot.data[index]["company"]["catchPhrase"]),
                             Text("Company BS: "+snapshot.data[index]["company"]["bs"]),
@@ -106,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 (
                   height: 100,
                   width: 100,
-                  child: CircularProgressIndicator()
+                  child: CircularProgressIndicator(strokeWidth: 5.0,)
                 )
               );
             }
