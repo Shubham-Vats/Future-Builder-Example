@@ -47,10 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("FutureBuilder", style: TextStyle(color: Colors.black),),
+        title: Text("FUTURE-BUILDER", style: TextStyle(color: Colors.black, letterSpacing: 2.0, fontWeight: FontWeight.w400),),
         backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 10.0,
+        automaticallyImplyLeading: false,
       ),
       body: Container(
         color: Colors.redAccent,
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         borderRadius: BorderRadius.circular(10.0)
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(20.0),
                         child: Column(
                           children: <Widget>[
                             Text("ID: "+snapshot.data[index]["id"].toString()),
